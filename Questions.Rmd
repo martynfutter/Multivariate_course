@@ -14,16 +14,16 @@ library(vegan)
 Before anything else, install all the packages we will be using. You only need to do this once. Then these can be loaded and used.
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 ###install required packages### 
-#delete hash symbol on the following lines and run (only needs to be done first time, not every time you run the code afterwards!)
-#install.packages("vegan")
-#install.packages("dplyr")
-#install.packages("cocorresp")
-#install.packages("tibble")
-#install.packages("labdsv")
-#install.packages("knitr")
-#install.packages("dendextend")
-#install.packages("pls")
-#install.packages("adespatial")
+#guard to prevent multiple install
+if(!is.element("vegan",installed.packages()[,1])) {install.packages("vegan") }
+if(!is.element("dplyr",installed.packages()[,1])) {install.packages("dplyr") }
+if(!is.element("cocorresp",installed.packages()[,1])) {install.packages("cocorresp") }
+if(!is.element("tibble",installed.packages()[,1])) {install.packages("tibble") }
+if(!is.element("labdsv",installed.packages()[,1])) {install.packages("labdsv") }
+if(!is.element("knitr",installed.packages()[,1])) {install.packages("knitr") }
+if(!is.element("dendextend",installed.packages()[,1])) {install.packages("dendextend") }
+if(!is.element("pls",installed.packages()[,1])) {install.packages("pls") }
+if(!is.element("adespatial",installed.packages()[,1])) {install.packages("adespatial") }
 ```
 
 ### <span style="color:cornflowerblue">First we need to load the R packages we will be using and import the data.</span>
